@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookIndex from "./bookIndex";
+import BookIndex from "./bookindex";
 
 export default class App extends Component {
   render() {
