@@ -13,7 +13,7 @@ export default class BookIndex extends Component {
     }
     // componentDidMount is used to call the api
     componentDidMount(){
-        fetch("http://127.0.0.1:5000/books",{ //fetching our api
+        fetch("https://ld-book-api-practice.herokuapp.com/books",{ //fetching our api
             method: "GET",
             headers: {
                 "accepts": "application/json",
