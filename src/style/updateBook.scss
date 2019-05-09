@@ -1,0 +1,21 @@
+.update-book-wrapper{
+    padding: 10px;
+
+    button{
+        padding: 10px;
+        font-family: $title;
+    }
+
+    form{
+
+        label{
+            font-family: $text;
+        }
+
+        input{ 
+            padding: 10px;
+            width: 20%;
+            text-align: center;
+        }
+    }
+}

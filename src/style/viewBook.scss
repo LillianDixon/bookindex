@@ -1,0 +1,35 @@
+.add-book-wrapper{
+    width: 100vw;
+    text-align: center;
+    
+    h1{
+        font-family: $title;
+        font-size: 3rem;
+    }
+
+    .book-title{
+        font-family: $title;
+        font-size: 2rem;
+        padding: 10px;
+    }
+    
+    .book-author{
+        font-family: $text;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    a{
+        text-decoration: none;
+        font-family: $text;
+        color: $navy;
+        padding: 10px;
+
+        &:hover{
+            text-decoration: underline $grey;
+            color: $grey;
+            transition: 0.5s;
+        }
+    }
+
+}

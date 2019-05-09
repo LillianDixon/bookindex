@@ -47,15 +47,21 @@ class UpdateBook extends Component {
 
   render() {
     return (
-      <div className=''>
+      <div className='update-book-wrapper'>
         <button onClick={this.editBook}>Update this book</button>
 
         <form onSubmit ={this.handleSubmit} style = {{visibility: this.state.formHidden ? "hidden" : "Visible"}}>
+          <div className="update-title">
             <label>Title</label>
             <input type="text" name="title" value={this.state.title} onChange={this.handleChange} />
+          </div>
+          <div className="update-author">
             <label>Author</label>
             <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
-            <input type="submit" value="submit" />
+          </div>
+          <div>
+            <button type="submit" value="submit">Submit</button>
+          </div>
         </form>
       </div>
     );

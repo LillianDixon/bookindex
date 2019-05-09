@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Books2 from "../../static/assets/images/books2.jpg"
 
 export default class AddBook extends Component {
     constructor(props){
@@ -24,7 +23,7 @@ export default class AddBook extends Component {
         let title = this.state.title
         let author = this.state.author
 
-        fetch("https://ld-book-api-practice.herokuapp.com/",{ //fetching our api from postman(or wherever)
+        fetch("https://ld-book-api-practice.herokuapp.com/input",{ //fetching our api from postman(or wherever)
             method: "post",
             headers: {
                 "Content-Type": "application/json"
@@ -42,17 +41,25 @@ export default class AddBook extends Component {
 
   render() {
     return (
-      <div className='add-book-wrapper' style={{backgroundImage: "url(" + Books2 +")" }}>
+      <div className='add-book-wrapper'>
         <h1>Add a Book Below</h1>
         {/* creating the input boxes to be able to add new books to our db */}
+        <hr />
         <form onSubmit = {this.handleSubmit}>
-            <label>Title</label>
-            <input type="text" name="title" value={this.state.title} onChange={this.handleChange} /> 
-            
-            <label>Author</label>
-            <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
+            <div className="add-title">
+                <label>Title</label>
+                <input type="text" name="title" value={this.state.title} onChange={this.handleChange} /> 
+            </div>
 
-            <input type="submit" value="submit" />
+            <div className="add-author">
+                <label>Author</label>
+                <input type="text" name="author" value={this.state.author} onChange={this.handleChange} />
+            </div>
+
+            <div  className="submit">
+            <button type="submit" value="submit">Submit</button>
+
+            </div>
         </form>
       </div>
     );

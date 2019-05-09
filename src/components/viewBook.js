@@ -13,6 +13,7 @@ export default class ViewBook extends Component {
 
     componentDidMount(){
         const {id} = this.props.match.params
+        console.log(id)
 
         fetch(`https://ld-book-api-practice.herokuapp.com/book/${id}`,{ //fetching our api
             method: "GET",
@@ -30,12 +31,14 @@ export default class ViewBook extends Component {
 
     render() {
         return (
-        <div className='app'>
+        <div className='add-book-wrapper'>
             <h1>Book Information</h1>
-            <div>
+
+            <hr />
+            <div className="book-title">
                 {this.state.singleBook[1]}
             </div>
-            <div>
+            <div className="book-author">
                 {this.state.singleBook[2]}
             </div>
             <DeleteAction id = {this.state.singleBook[0]} />

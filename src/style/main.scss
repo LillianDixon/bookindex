@@ -1,56 +1,63 @@
-html {
-    font-size: 62.5%; // 1rem is 10px
-}
+@import "variables.scss";
+@import "nav.scss";
+@import "bookindex.scss";
+@import 'app.scss';
+@import 'addBook.scss';
+@import 'deleteBook.scss';
+@import "viewBook.scss";
+@import "updateBook.scss";
 
-*,
-*::after,
-*::before {
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: 'montserrat';
+    background-color: $white;
+    // height: 100%;
+    // overflow-y: visible;
 }
 
-body {
-    overflow-x: hidden;
-    font-weight: normal;
+// *,
+// *::after,
+// *::before {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: inherit;
+// }
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-}
+// body {
+//     overflow-x: hidden;
+//     font-weight: normal;
 
-.app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 95vh;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     text-rendering: optimizeLegibility;
+//     -webkit-tap-highlight-color: transparent;
+// }
+
+// .app {
+//     margin-top: 2rem;
+//     display: grid;
+//     justify-items: center;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 95vh;
 
 
-}
+// }
 
-.content{
-    color: white;
-}
+// .content{
+//     color: black;
+// }
 
-.nav {
-    width: 100%;
-    height: 30px;
-}
 
-.add-book-wrapper{
-    color: whitesmoke;
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 95vh;
-}
+// .add-book-wrapper{
+//     color: whitesmoke;
+//     margin-top: 2rem;
+//     display: grid;
+//     justify-items: center;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     width: 100%;
+//     height: 95vh;
+// }
