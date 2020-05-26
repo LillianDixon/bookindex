@@ -23,7 +23,7 @@ export default class AddBook extends Component {
         let title = this.state.title
         let author = this.state.author
 
-        fetch("https://ld-book-api-practice.herokuapp.com/book/input",{ //fetching our api from postman(or wherever)
+        fetch("http://127.0.0.1:5000/book/input",{ //fetching our api from postman(or wherever)
             method: "post",
             headers: {
                 "Content-Type": "application/json"

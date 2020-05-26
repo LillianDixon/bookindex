@@ -13,7 +13,7 @@ export default class BookIndex extends Component {
     }
     // componentDidMount is used to call the api
     componentDidMount(){
-        fetch("https://ld-book-api-practice.herokuapp.com/books",{ //fetching our api
+        fetch("http://127.0.0.1:5000/books",{ //fetching our api
             method: "GET",
             headers: {
                 "accepts": "application/json",
@@ -33,6 +33,7 @@ export default class BookIndex extends Component {
         // <div className='app' style={{backgroundImage: "url(" + BooksImg +")" }}>
         <div className="content">
             <h1>List of books</h1>
+            {console.log('book state', this.state.books)}
             {this.state.books.map((book) => (
                 <div key={book[0]}>
                     <h2>Book Title: {book[1]}</h2>

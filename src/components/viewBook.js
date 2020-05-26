@@ -15,7 +15,7 @@ export default class ViewBook extends Component {
         const {id} = this.props.match.params
         console.log(id)
 
-        fetch(`https://ld-book-api-practice.herokuapp.com/book/${id}`,{ //fetching our api
+        fetch(`http://127.0.0.1:5000/book/${id}`,{ //fetching our api
             method: "GET",
             headers: {
                 "accepts": "application/json",
